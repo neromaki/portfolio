@@ -1,0 +1,14 @@
+$mobile: 420px;
+
+html {
+  height: 100%;
+}
+
+body {
+    min-height: 100%;
+    color: $palette__font;
+}
+
+main {
+  //min-height: calc(100vh - (65px + 93px) );
+}

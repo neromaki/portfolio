@@ -1,0 +1,75 @@
+.card--project {
+  background: darken($palette__white, 10%);
+
+  .uk-card-header {
+      background: $palette__grey--dark;
+
+      h3 {
+        color: $palette__white;
+      }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  .uk-card-body {
+    color: $palette__font;
+    padding-bottom: 25px;
+  }
+
+  .badge-list {
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin-top: 0;
+      margin-left: 3px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .tech {
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    .uk-label {
+      background: lighten($palette__grey--dark, 10%);
+    }
+  }
+
+  .uk-card-footer {
+    padding-bottom: 80px;
+    padding-top: 0;
+
+    .card-buttons {
+      margin-top: 20px;
+      position: absolute;
+      bottom: 20px;
+      width: auto;
+      left: 40px;
+      right: 40px;
+    }
+
+    .uk-button {
+      background: lighten($palette__grey--dark, 2%);
+      color: $palette__white;
+      flex-grow: 3;
+
+      &:hover {
+        background: lighten($palette__grey--dark, 6%);
+      }
+
+      &.button--code {
+        flex-grow: 1;
+      }
+    }
+  }
+}

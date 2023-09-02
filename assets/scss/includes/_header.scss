@@ -1,0 +1,172 @@
+header {
+  padding: 15px 0;
+  background: $palette__white;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.4);
+
+  .header__shaun {
+    max-width: 85px;
+    border-radius: 50%;
+    transition: max-width ease-out .2s;
+
+    @media(max-width: 330px) {
+      display: none;
+    }
+  }
+
+  h1 {
+    display: inline-block;
+    margin: 0;
+    transition: font-size ease-out .15s;
+  }
+
+  span {
+      display: block;
+      font-size: 1.2em;
+      opacity: 1;
+  }
+
+  .header__social {
+    font-size: 1.75em;
+    transition: font-size ease-out .15s;
+
+    a {
+      margin: 0 7px;
+      color: $palette__font;
+      transition: color ease-in-out .2s;
+
+      &:hover {
+        color: darken($palette__terracotta, 25%);
+      }
+    }
+  }
+
+  &.header--scrolling {
+    padding: 5px 0;
+
+    .header__shaun {
+      max-width: 50px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    @keyframes hideSubtitle {
+        0%   {
+          opacity: 1;
+        }
+        90%  {
+          opacity: 0;
+        }
+        100% {
+          font-size: 0em;
+        }
+    }
+
+    span {
+      font-size: 1em;
+      animation: hideSubtitle .5s;
+      animation-fill-mode: forwards;
+    }
+
+    .header__social {
+      font-size: 1.5em;
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding: 5px 0;
+
+    .header__shaun {
+      max-width: 70px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    span {
+      font-size: 1em;
+    }
+
+    .header__social {
+      font-size: 1.5em;
+    }
+
+    .uk-navbar-toggle {
+      transform: scale(1.5);
+      color: $palette__font;
+    }
+  }
+}
+
+.overlay--hero {
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.uk-navbar-nav {
+    > li {
+
+      > a {
+        color: $palette__font;
+      }
+
+      &.uk-active {
+
+        > a {
+          font-weight: 500;
+        }
+      }
+    }
+}
+
+.mobile-nav {
+
+  > div {
+    background: darken($palette__white, 5%);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mobile-nav__nav {
+    font-size: 1.5em;
+    > li {
+      padding: 0 20px;
+
+      &:hover {
+        background: darken($palette__white, 10%);
+      }
+
+      > a {
+        color: $palette__font;
+        transition: transform ease-out .2s, background ease-out .2s;
+
+        &:hover {
+          color: $palette__font;
+          transform: translateX(7px);
+        }
+      }
+
+      &.uk-active {
+        > a {
+          color: $palette__font;
+          font-weight: 500;
+        }
+      }
+    }
+
+  }
+
+  .mobile-nav__social {
+    position: absolute;
+    bottom: 20px;
+    padding: 0 20px;
+
+    a {
+      font-size: 1.75em;
+      margin: 0 9px;
+      color: $palette__font;
+    }
+  }
+}
